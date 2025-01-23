@@ -1,0 +1,256 @@
+:root { /*global*/
+    --couleur-000: #000;
+    --couleur-001: #FFFFFF;
+    --couleur-01: #009b96;
+    --couleur-02: #194146;
+    --couleur-03: #143739;
+    --couleur-04: #9ad8da;
+    --couleur-05: #18ED8F;
+    --couleur-06: #f4db76;
+    --couleur-07: #fac6d2;
+}
+
+* { /*global*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body { /*global pour le body*/
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--couleur-001) 0%, var(--couleur-04) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+header { /*global pour le header*/
+    background: var(--couleur-02);
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.ConternairTitle { /*global pour page index, le titre*/
+    max-width: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.ConternairTitle img { /*global pour page index, le titre*/
+    max-width: 200px;
+    height: auto;
+    filter: brightness(1.1);
+}
+
+.ConternairSousTitre {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+ }
+ 
+ .ConternairSousTitre a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--couleur-02);
+    background: var(--couleur-07);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+ }
+ 
+ .ConternairSousTitre a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--couleur-04) 50%,
+        transparent 100%
+    );
+    opacity: 0.5;
+    transition: left 0.5s ease;
+ }
+ 
+ .ConternairSousTitre a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    color: var(--couleur-01);
+    border-color: var(--couleur-01);
+ }
+ 
+ .ConternairSousTitre a:hover::before {
+    left: 100%;
+ }
+
+header .Conternair { /*global pour le header de la page comptabilite*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    color: var(--couleur-01); /* Ajout de cette ligne pour définir la couleur du texte en blanc */
+    font-size: 2rem; /* Ajout de cette ligne pour augmenter la taille du texte */
+    font-weight: bold;
+}
+
+header .ConternairIcon { /*global pour le header de la page comptabilite*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    color: var(--couleur-001); /* Ajout de cette ligne pour définir la couleur du texte en blanc */
+    font-size: 2rem; /* Ajout de cette ligne pour augmenter la taille du texte */
+    font-weight: bold;
+}
+
+main { /*global pour le titre*/
+    flex: 1;
+    padding: 3rem 1rem;
+    margin : 0 auto;
+}
+
+.MENU {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+ }
+ 
+ .MENU p {
+    height: 100px;
+    margin: 0;
+ }
+ 
+ .MENU a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--couleur-02);
+    background: var(--couleur-07);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+ }
+
+.MENU a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--couleur-04) 50%,
+        transparent 100%
+    );
+    opacity: 0.5;
+    transition: left 0.5s ease;
+ }
+ 
+ .MENU a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    color: var(--couleur-01);
+    border-color: var(--couleur-01);
+ }
+
+.Echap { /* pour le titre dans le footer */
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--couleur-000); /* Ajout de cette ligne pour changer la couleur du texte en blanc */
+}
+
+footer { /*global pour le footer*/
+    background: var(--couleur-01);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    margin-top: 10rem;
+    color: var(--couleur-01); /* Ajout de cette ligne pour changer la couleur du texte en blanc */
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .MENU, .ConternairSousTitre {
+        max-width: 90%;
+    }
+ 
+    header .Conternair {
+        font-size: 1.5rem;
+    }
+ }
+ 
+ @media (max-width: 768px) {
+    .MENU, .ConternairSousTitre {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+ 
+    .MENU p, .ConternairSousTitre a {
+        height: 80px;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+ 
+    main {
+        padding: 2rem 0.5rem;
+    }
+ 
+    header .Conternair {
+        font-size: 1.2rem;
+    }
+ }
+ 
+ @media (max-width: 480px) {
+    .MENU, .ConternairSousTitre {
+        gap: 0.8rem;
+        padding: 0.3rem;
+    }
+ 
+    .MENU p, .ConternairSousTitre a {
+        height: 70px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+ 
+    header .Conternair {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+ 
+    footer {
+        margin-top: 5rem;
+    }
+ }
