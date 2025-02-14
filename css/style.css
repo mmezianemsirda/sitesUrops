@@ -99,25 +99,25 @@ header { /*global pour le header*/
     left: 100%;
  }
 
-header .Conternair { /*global pour le header de la page comptabilite*/
+header .Conternair { 
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
     display: flex;
     justify-content: center;
-    color: var(--couleur-01); /* Ajout de cette ligne pour définir la couleur du texte en blanc */
-    font-size: 2rem; /* Ajout de cette ligne pour augmenter la taille du texte */
+    color: var(--couleur-01);
+    font-size: 2rem;
     font-weight: bold;
 }
 
-header .ConternairIcon { /*global pour le header de la page comptabilite*/
+header .ConternairIcon {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
     display: flex;
     justify-content: center;
-    color: var(--couleur-001); /* Ajout de cette ligne pour définir la couleur du texte en blanc */
-    font-size: 2rem; /* Ajout de cette ligne pour augmenter la taille du texte */
+    color: var(--couleur-001);
+    font-size: 2rem;
     font-weight: bold;
 }
 
